@@ -1,0 +1,61 @@
+@import "src/theme/theme-variables";
+
+:host {
+  z-index: 10;
+
+  .navbar {
+    margin-bottom: $spacer;
+
+    &.bg-primary {
+      background-color: $gold !important;
+      box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.2), 0 2px 1px 0 rgba(0, 0, 0, 0.14), 0 6px 3px 0 rgba(0, 0, 0, 0.12);
+      position: fixed;
+      left: 0;
+      right: 0;
+    }
+
+    .navbar-brand {
+      color: $blue;
+      font-weight: bold;
+      font-size: 1.5em;
+
+      img {
+        height: 42px;
+      }
+    }
+  }
+  .navbar-nav {
+    .nav-link {
+      color: $blue;
+      font-weight: bold;
+
+      &.active,
+      &:hover {
+        color: white;
+      }
+    }
+
+    .nav-link.dropdown-toggle {
+      cursor: pointer;
+    }
+
+    .dropdown-menu {
+      background-color: $gold;
+      border: none;
+      width: 100%;
+      box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.2), 0 2px 1px 0 rgba(0, 0, 0, 0.14), 0 6px 3px 0 rgba(0, 0, 0, 0.12);
+
+      .dropdown-item {
+        color: $blue;
+        font-weight: bold;
+        text-transform: uppercase;
+
+        &:hover,
+        &.active {
+          color: white;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+}

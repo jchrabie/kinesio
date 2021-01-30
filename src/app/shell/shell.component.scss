@@ -1,0 +1,41 @@
+@import "src/theme/theme-variables";
+
+:host {
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+
+  main {
+    margin: 90px 0 20px;
+  }
+
+  .btn-outline-primary {
+    color: $gold;
+    border-color: $gold;
+    border-radius: 2rem;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-width: 5px;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $gold;
+      color: $blue;
+    }
+
+    &::after {
+      display: inline-block;
+      margin-left: 0.255em;
+      content: "";
+      border-top: 0.75em solid;
+      border-right: 0.5em solid transparent;
+      border-bottom: 0;
+      border-left: 0.5em solid transparent;
+      transform: rotate(270deg);
+    }
+  }
+}

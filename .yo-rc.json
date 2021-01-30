@@ -1,0 +1,59 @@
+{
+  "generator-ngx-rocket": {
+    "appName": "diane-kinesio",
+    "target": [
+      "web"
+    ],
+    "pwa": false,
+    "mobile": null,
+    "desktop": null,
+    "ui": "bootstrap",
+    "layout": null,
+    "auth": false,
+    "lazy": true,
+    "angulartics": true,
+    "languages": [
+      "fr-FR"
+    ],
+    "analyticsProvider": "gtm",
+    "googleAnalyticsAccount": null,
+    "tools": [
+      "prettier",
+      "hads"
+    ],
+    "utility": [],
+    "deploy": "none",
+    "version": "8.1.1",
+    "props": {
+      "location": "path",
+      "strict": false,
+      "skipInstall": false,
+      "skipQuickstart": false,
+      "initGit": true,
+      "usePrefix": true,
+      "target": [
+        "web"
+      ],
+      "pwa": false,
+      "ui": "bootstrap",
+      "auth": false,
+      "lazy": true,
+      "angulartics": true,
+      "languages": [
+        "fr-FR"
+      ],
+      "analyticsProvider": "gtm",
+      "tools": [
+        "prettier",
+        "hads"
+      ],
+      "utility": [],
+      "deploy": "none",
+      "appName": "diane-kinesio",
+      "projectName": "diane-kinesio",
+      "packageManager": "npm",
+      "mobile": [],
+      "desktop": []
+    }
+  }
+}
