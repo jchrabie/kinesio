@@ -1,15 +1,15 @@
 @import "src/theme/theme-variables";
 
 footer {
-  background-color: $gold-light;
-  color: $black;
+  background-color: $white-app;
+  color: $primary;
 
   h5 {
-    color: $blue;
+    color: $secondary;
   }
 
   a {
-    color: $black;
+    color: $primary;
     text-decoration: none;
   }
 
@@ -20,10 +20,10 @@ footer {
 
 .footer-copyright {
   background-color: $gray-800;
-  color: white;
+  color: $white-app;
 
   a {
-    color: $gold;
+    color: $secondary;
     font-weight: bold;
   }
 }

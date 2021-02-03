@@ -40,9 +40,25 @@
   }
 }
 
-p {
+p,
+.primary-bullet li {
   font-size: 1.3em;
   text-align: justify;
+}
+
+ul.primary-bullet {
+  list-style: none; /* Remove default bullets */
+  padding-left: 25px;
+
+  li::before {
+    content: "\2611"; /* Add content: \2611 is the CSS Code/unicode for a check */
+    color: $secondary; /* Change the color */
+    font-weight: bold; /* If you want it to be bold */
+    display: inline-block; /* Needed to add space between the bullet and the text */
+    width: 1em; /* Also needed for space (tweak if needed) */
+    margin-left: -1em; /* Also needed for space (tweak if needed) */
+    margin-right: 0.5em;
+  }
 }
 
 .img-float {
@@ -67,14 +83,18 @@ h2,
 h3,
 h4,
 h5 {
-  margin-bottom: 1em;
-  color: $gold;
+  margin: 2em 0 !important;
+  color: $secondary;
   font-weight: 900;
 }
 
 body {
-  background-color: $blue;
+  background-color: $primary;
   color: $white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
+}
+
+b {
+  color: $secondary;
 }

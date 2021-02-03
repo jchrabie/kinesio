@@ -3,26 +3,20 @@
   <img src="assets/bulle.png" alt="Bulle" class="top-left bulle" />
   <div class="container">
     <h2>Kinesiologie</h2>
-    <p>
-      Les troubles émotionnels, les douleurs physiques récurrentes, le besoin de se libérer d’anciens schémas de
-      pensées, de peurs et de blocages. <br />
-      Le stress, l’angoisse et la fatigue chronique. <br />
-      L’envie de changer de mode de fonctionnement, le besoin de mieux se comprendre et retrouver de l’énergie. <br />
-      Une période de changement dans votre vie, la recherche d’une meilleure communication avec vous- même, avec les
-      autres. <br />
-      <b>La kinésiologie peut vous accompagner! </b>
-    </p>
-    <p>
-      La kinésiologie est un outil de de développement personnel basé sur le test musculaire. Elle comprend différentes
-      techniques qui permettent de <b>déceler et lever les blocages</b> qui vous empêchent d’atteindre votre plein
-      potentiel. <br />
-      En kinésiologie je travaille sur <b>le Corps, le Mental, l’Emotionnel et l’Energétique</b>. <br />
-      Le Corps, formidable <b>messager des émotions et de l’inconscient</b> me guide à travers le test musculaire afin
-      que vous preniez conscience de votre fonctionnement et retrouviez
-      <b>votre liberté d’Etre et le pouvoir de faire des Choix</b>.
-    </p>
-    <h3 class="mb-4">Quelques exemples de sujets traités en kinésiologie :</h3>
-    <div class="row">
+    <p>Les troubles émotionnels, les douleurs physiques récurrentes, le besoin de se libérer d’anciens schémas de pensées, de peurs et de blocages. </p>
+    <p>Le stress, l’angoisse et la fatigue chronique. </p>
+    <p>L’envie de changer de mode de fonctionnement, le besoin de mieux se comprendre et retrouver de l’énergie. </p>
+    <p>Une période de changement dans votre vie, la recherche d’une meilleure communication avec vous- même, avec les autres. <b>La kinésiologie peut vous accompagner! </b></p>
+    <br>
+    <p>La kinésiologie est un outil de de développement personnel basé sur le test musculaire. Elle comprend différentes techniques qui permettent de <b>déceler et lever les blocages</b> qui vous empêchent d’atteindre votre plein potentiel. <br /></p>
+    <p>En kinésiologie je travaille sur <b>le Corps, le Mental, l’Emotionnel et l’Energétique</b>. </p>
+    <p>Le Corps, formidable <b>messager des émotions et de l’inconscient</b> me guide à travers le test musculaire afin que vous preniez conscience de votre fonctionnement et retrouviez <b>votre liberté d’Etre et le pouvoir de faire des Choix</b>.</p>
+
+    <h3>Quelques exemples de sujets traités en kinésiologie :</h3>
+    <ul class="primary-bullet">
+      <li *ngFor="let subject of kinesioSubjects">{{ subject.name }}</li>
+    </ul>
+    <!-- <div class="row">
       <div
       *ngFor="let subject of kinesioSubjects"
       class="col-sm-12 col-md-6 col-lg-4 mb-3"
@@ -37,10 +31,12 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
+
     <h3>Pour qui ?</h3>
     <p>Adulte, adolescent et enfant à partir de 12 ans.</p>
     <h3>Durée :</h3>
     <p>Une séance dure en générale entre 1h15 et 1h45.</p>
   </div>
 </div>
+<app-contact-btn></app-contact-btn>
