@@ -23,7 +23,15 @@ export class AppComponent implements OnInit, OnDestroy {
     private titleService: Title,
     private translateService: TranslateService,
     private i18nService: I18nService
-  ) {}
+  ) {
+    this.router.events.subscribe((evt) => {
+      if (!(evt instanceof NavigationEnd)) {
+        return;
+      }
+
+      window.scrollTo(0, 0)
+    });
+  }
 
   ngOnInit() {
     // Setup logger
