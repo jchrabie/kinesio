@@ -25,7 +25,7 @@ export class KinesiologieComponent implements OnInit {
   ngOnInit(): void {}
 
   public onIntersection({ target, visible }: { target: Element; visible: boolean }): void {
-      this.renderer.addClass(target, visible ? 'active' : 'inactive');
-      this.renderer.removeClass(target, visible ? 'inactive' : 'active');
+    this.renderer.addClass(target, visible ? 'active' : 'inactive');
+    this.renderer.removeClass(target, visible ? 'inactive' : 'active');
   }
 }

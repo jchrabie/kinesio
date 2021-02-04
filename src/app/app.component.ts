@@ -29,7 +29,7 @@ export class AppComponent implements OnInit, OnDestroy {
         return;
       }
 
-      window.scrollTo(0, 0)
+      window.scrollTo(0, 0);
     });
   }
 

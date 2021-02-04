@@ -3,11 +3,12 @@
 .btn-outline-primary {
   color: $secondary;
   border-color: $secondary;
-  border-radius: 2rem;
+  border-radius: 3rem;
   text-transform: uppercase;
   font-weight: 900;
   border-width: 5px;
   padding: 15px;
+  font-size: 1.5em;
 
   &:hover,
   &:active,

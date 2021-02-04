@@ -3,19 +3,61 @@
   <img src="assets/bulle.png" alt="Bulle" class="top-left bulle" />
   <div class="container">
     <h2>Kinesiologie</h2>
-    <p>Les troubles émotionnels, les douleurs physiques récurrentes, le besoin de se libérer d’anciens schémas de pensées, de peurs et de blocages. </p>
-    <p>Le stress, l’angoisse et la fatigue chronique. </p>
-    <p>L’envie de changer de mode de fonctionnement, le besoin de mieux se comprendre et retrouver de l’énergie. </p>
-    <p>Une période de changement dans votre vie, la recherche d’une meilleure communication avec vous- même, avec les autres. <b>La kinésiologie peut vous accompagner! </b></p>
-    <br>
-    <p>La kinésiologie est un outil de de développement personnel basé sur le test musculaire. Elle comprend différentes techniques qui permettent de <b>déceler et lever les blocages</b> qui vous empêchent d’atteindre votre plein potentiel. <br /></p>
-    <p>En kinésiologie je travaille sur <b>le Corps, le Mental, l’Emotionnel et l’Energétique</b>. </p>
-    <p>Le Corps, formidable <b>messager des émotions et de l’inconscient</b> me guide à travers le test musculaire afin que vous preniez conscience de votre fonctionnement et retrouviez <b>votre liberté d’Etre et le pouvoir de faire des Choix</b>.</p>
 
-    <h3>Quelques exemples de sujets traités en kinésiologie :</h3>
-    <ul class="primary-bullet">
-      <li *ngFor="let subject of kinesioSubjects">{{ subject.name }}</li>
-    </ul>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 pr-md-5">
+        <h3>Pour qui:</h3>
+        <p>Adulte, adolescent et enfant à partir de 12 ans.</p>
+      </div>
+      <div class="col-sm-12 col-md-6 pl-md-5">
+        <h3>Durée:</h3>
+        <p>Une séance dure en générale entre 1h15 et 1h45.</p>
+      </div>
+    </div>
+    <h3>Pour quoi:</h3>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 pr-md-5">
+        <p>
+          Les troubles émotionnels, les douleurs physiques récurrentes, le besoin de se libérer d’anciens schémas de
+          pensées, de peurs et de blocages.
+        </p>
+        <p>Le stress, l’angoisse et la fatigue chronique.</p>
+        <p>L’envie de changer de mode de fonctionnement, le besoin de mieux se comprendre et retrouver de l’énergie.</p>
+        <p>
+          Une période de changement dans votre vie, la recherche d’une meilleure communication avec vous- même, avec les
+          autres. <b>La kinésiologie peut vous accompagner! </b>
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6 pl-md-5">
+        <p>
+          La kinésiologie est un outil de de développement personnel basé sur le test musculaire. Elle comprend
+          différentes techniques qui permettent de <b>déceler et lever les blocages</b> qui vous empêchent d’atteindre
+          votre plein potentiel.
+        </p>
+        <p>En kinésiologie je travaille sur <b>le Corps, le Mental, l’Emotionnel et l’Energétique</b>.</p>
+        <p class="mb-4">
+          Le Corps, formidable <b>messager des émotions et de l’inconscient</b> me guide à travers le test musculaire
+          afin que vous preniez conscience de votre fonctionnement et retrouviez
+          <b>votre liberté d’Etre et le pouvoir de faire des Choix</b>.
+        </p>
+      </div>
+    </div>
+
+    <h3>Quelques exemples de sujets traités en kinésiologie:</h3>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <ul class="primary-bullet mb-sm-0 mb-md-2 pr-md-5">
+          <li *ngFor="let subject of kinesioSubjects | slice: 0:kinesioSubjects.length / 2">{{ subject.name }}</li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <ul class="primary-bullet mb-2 pl-md-5">
+          <li *ngFor="let subject of kinesioSubjects | slice: kinesioSubjects.length / 2">{{ subject.name }}</li>
+        </ul>
+      </div>
+    </div>
+
+    <app-contact-btn class="pt-4"></app-contact-btn>
     <!-- <div class="row">
       <div
       *ngFor="let subject of kinesioSubjects"
@@ -32,11 +74,5 @@
         </div>
       </div>
     </div> -->
-
-    <h3>Pour qui ?</h3>
-    <p>Adulte, adolescent et enfant à partir de 12 ans.</p>
-    <h3>Durée :</h3>
-    <p>Une séance dure en générale entre 1h15 et 1h45.</p>
   </div>
 </div>
-<app-contact-btn></app-contact-btn>

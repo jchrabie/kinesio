@@ -51,7 +51,7 @@ ul.primary-bullet {
   padding-left: 25px;
 
   li::before {
-    content: "\2611"; /* Add content: \2611 is the CSS Code/unicode for a check */
+    content: "\25CF"; /* Add content: \25CF is the CSS Code/unicode for a bullet */
     color: $secondary; /* Change the color */
     font-weight: bold; /* If you want it to be bold */
     display: inline-block; /* Needed to add space between the bullet and the text */
@@ -83,7 +83,7 @@ h2,
 h3,
 h4,
 h5 {
-  margin: 2em 0 !important;
+  margin: 1.5em 0 !important;
   color: $secondary;
   font-weight: 900;
 }

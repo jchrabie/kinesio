@@ -6,6 +6,37 @@
   .navbar {
     margin-bottom: $spacer;
 
+    .navbar-toggler-icon {
+      filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(156deg) brightness(50%) contrast(80%);
+    }
+
+    .navbar-toggler {
+      border-color: $primary;
+
+      &:focus {
+        outline-color: $primary;
+      }
+    }
+
+    .page-title {
+      font-family: "Abel", sans-serif !important;
+      color: $black;
+
+      .text-small {
+        position: relative;
+        font-size: 0.8em;
+
+        &::before {
+          content: "";
+          position: absolute;
+          background-color: $blue-light;
+          height: 2px;
+          width: 50px;
+          margin-left: calc(50% - 25px);
+        }
+      }
+    }
+
     &.bg-primary {
       box-shadow: 0 3px 2px -1px rgba(0, 0, 0, 0.2), 0 2px 1px 0 rgba(0, 0, 0, 0.14), 0 6px 3px 0 rgba(0, 0, 0, 0.12);
       position: fixed;
@@ -25,9 +56,13 @@
     }
   }
   .navbar-nav {
+    .navbar-toggler-icon {
+      filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(156deg) brightness(50%) contrast(80%);
+    }
     .nav-link {
       color: $blue-light;
       font-weight: bold;
+      font-size: 1.1rem;
 
       &.active,
       &:hover {
