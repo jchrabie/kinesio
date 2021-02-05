@@ -4,7 +4,6 @@
   "private": true,
   "scripts": {
     "ng": "ng",
-    "build": "npm run env -s && ng build --prod",
     "start": "npm run env -s && ng serve --port=4201 --proxy-config proxy.conf.js",
     "lint": "ng lint && stylelint \"src/**/*.scss\" --syntax scss && htmlhint \"src\" --config .htmlhintrc",
     "test": "npm run env -s && ng test",
@@ -17,6 +16,7 @@
     "prettier:check": "prettier --list-different \"./{src,e2e}/**/*.{ts,js,html,scss}\"",
     "postinstall": "npm run prettier -s",
     "generate": "ng generate",
+    "build": "ng build --prod",
     "deploy": "ng build --prod --base-href 'https://jchrabie.github.io/kinesio/' && npx angular-cli-ghpages --dir=dist"
   },
   "dependencies": {

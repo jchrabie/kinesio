@@ -27,3 +27,21 @@
     }
   }
 }
+
+.top-left {
+  height: 30vh;
+  position: fixed;
+  max-width: 100%;
+  top: 15%;
+  opacity: 0.6;
+  z-index: -1;
+  left: 10%;
+}
+
+.full-page {
+  height: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+}

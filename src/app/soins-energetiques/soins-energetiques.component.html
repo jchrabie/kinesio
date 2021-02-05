@@ -1,19 +1,65 @@
 <div class="container-fluid">
-  <img src="assets/plume.png" alt="plume" class="full-page plume" />
+  <img src="assets/bulle.png" alt="Bulle" class="full-page bulle" />
+  <img src="assets/bulle.png" alt="Bulle" class="top-left bulle" />
+  <div class="container bg-secondary rounded">
+    <div class="row mt-5">
+      <div class="col-sm-12 col-md-6 pr-md-5 how-who-container">
+        <h3 class="text-primary mt-0">Pour qui:</h3>
+        <p>Tout le monde, Adultes et Enfants.</p>
+      </div>
+      <div class="col-sm-12 col-md-6 pl-md-5 how-who-container">
+        <h3 class="text-primary mt-0">Durée:</h3>
+        <p>Un soin dure environ 1h à 1h15 pour un adulte, 30 minutes pour un enfant.</p>
+      </div>
+
+      <app-contact-btn class="col-12"></app-contact-btn>
+    </div>
+  </div>
   <div class="container">
-    <h2>Les soins Energétiques</h2>
-    <h3>{{ title }}</h3>
-    <p>
-      Commodo nostrud exercitation ullamco culpa dolor deserunt. Velit sint incididunt commodo ipsum qui proident mollit
-      mollit pariatur dolor duis eu non officia. Magna minim eu qui cupidatat ex do. Mollit aliquip ad mollit fugiat.
-      Pariatur magna dolore non do officia ad Lorem commodo consectetur sunt cillum. Consequat sunt veniam eiusmod irure
-      voluptate pariatur nostrud eiusmod exercitation. Voluptate commodo sunt laboris enim enim aliqua duis consectetur
-      minim.
-    </p>
-    <p>
-      Quis elit consequat Lorem esse fugiat labore do. Adipisicing ullamco voluptate adipisicing laboris. Labore
-      incididunt occaecat Lorem consectetur qui ullamco. Quis reprehenderit irure eiusmod do labore tempor voluptate.
-    </p>
+    <h2>Le soin énergétique</h2>
+    <div class="row">
+      <div class="col-sm-12 col-md-6 pr-md-5">
+        <p>
+          La fatigue, la rumination, le manque d’entrain, une baisse de vitalité, la sensation d’être « à côté de la
+          plaque », ou simplement le besoin de se poser et de s’accorder un peu douceur et de calme ?
+        </p>
+        <p>
+          Le Reiki, art tibétain de soin énergétique qui utilise l’Energie Vitale Universelle, offre ses bienfaits dans
+          de nombreux cas. Cette énergie est présente en quantité illimitée dans l’univers, dans tout ce qui est vivant,
+          dans chaque molécule, jusque dans l’air et l’eau.
+        </p>
+      </div>
+      <div class="col-sm-12 col-md-6 pl-md-5">
+        <p>
+          C’est une méthode naturelle, douce et efficace qui permet de transférer l’Energie là où elle est nécessaire.
+        </p>
+        <p>Lors d’un soin Reiki je <b>canalise l’énergie vitale universelle afin de vous la </b>.</p>
+        <p>
+          Le transfert permet au receveur d’harmoniser son énergie et de
+          <b>retrouver le bien-être et le calme intérieur</b>.
+        </p>
+        <p class="mb-4">
+          Formée également à d’autres techniques de soin énergétique, j’adapte le soin selon vos besoins.
+        </p>
+      </div>
+    </div>
+
+    <h3>Pourquoi un soin Reiki:</h3>
+    <div class="row">
+      <div class="col-sm-12 col-md-6">
+        <ul class="primary-bullet mb-sm-0 mb-md-2 pr-md-5">
+          <li *ngFor="let subject of soinsEnergetiqueSubjects | slice: 0:soinsEnergetiqueSubjects.length / 2">
+            {{ subject.name }}
+          </li>
+        </ul>
+      </div>
+      <div class="col-sm-12 col-md-6">
+        <ul class="primary-bullet mb-2 pl-md-5">
+          <li *ngFor="let subject of soinsEnergetiqueSubjects | slice: soinsEnergetiqueSubjects.length / 2">
+            {{ subject.name }}
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
-<app-contact-btn></app-contact-btn>

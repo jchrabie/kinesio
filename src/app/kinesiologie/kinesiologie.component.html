@@ -1,13 +1,13 @@
 <div class="container-fluid">
   <img src="assets/bulle.png" alt="Bulle" class="full-page bulle" />
   <img src="assets/bulle.png" alt="Bulle" class="top-left bulle" />
-  <div class="container bg-secondary">
+  <div class="container bg-secondary rounded">
     <div class="row mt-5">
-      <div class="col-sm-12 col-md-6 pr-md-5  how-who-container">
+      <div class="col-sm-12 col-md-6 pr-md-5 how-who-container">
         <h3 class="text-primary mt-0">Pour qui:</h3>
         <p>Adulte, adolescent et enfant à partir de 12 ans.</p>
       </div>
-      <div class="col-sm-12 col-md-6 pl-md-5  how-who-container">
+      <div class="col-sm-12 col-md-6 pl-md-5 how-who-container">
         <h3 class="text-primary mt-0">Durée:</h3>
         <p>Une séance dure en générale entre 1h15 et 1h45.</p>
       </div>
@@ -58,21 +58,5 @@
         </ul>
       </div>
     </div>
-    <!-- <div class="row">
-      <div
-      *ngFor="let subject of kinesioSubjects"
-      class="col-sm-12 col-md-6 col-lg-4 mb-3"
-      >
-        <div class="card"
-        inViewport
-        [inViewportOptions]="{ threshold: [20] }"
-        (inViewportAction)="onIntersection($event)">
-          <img class="card-img-top" [src]="subject.img" [attr.alt]="subject.name" loading="lazy"/>
-          <div class="card-body">
-            <h5 class="card-title">{{ subject.name }}</h5>
-          </div>
-        </div>
-      </div>
-    </div> -->
   </div>
 </div>

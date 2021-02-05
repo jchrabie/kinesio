@@ -15,18 +15,8 @@ export const linkList: Link[] = [
     url: '/kinesiologie',
   },
   {
-    name: 'Les soins energetiques',
+    name: 'Le soin énergétique',
     url: '/soins-energetiques',
-    children: [
-      {
-        name: 'La personne',
-        url: '/soins-energetiques/personne',
-      },
-      {
-        name: 'Lieu de vie',
-        url: '/soins-energetiques/lieu-de-vie',
-      },
-    ],
   },
   {
     name: 'Mon histoire',
