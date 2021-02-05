@@ -16,6 +16,35 @@
 // Theme customization
 @import "theme/theme";
 
+.modal-content {
+  border-radius: 2rem 0.3rem;
+
+  .modal-footer {
+    border-radius: 0 0 1.9rem 0.2rem;
+  }
+}
+
+.cookie-header {
+  background-image: url("assets/cookies.jpg");
+  border-radius: 2rem 0.3rem 0 0;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200px;
+
+  .close {
+    opacity: 1;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+  }
+
+  .cookie-head {
+    color: #452409 !important;
+    font-size: 2.8em;
+    font-weight: bolder;
+  }
+}
+
 .full-page {
   max-height: calc(100vh - 70px);
   position: fixed;

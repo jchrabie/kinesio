@@ -17,7 +17,8 @@
     "postinstall": "npm run prettier -s",
     "generate": "ng generate",
     "build": "ng build --prod",
-    "deploy": "ng build --prod --base-href 'https://jchrabie.github.io/kinesio/' && npx angular-cli-ghpages --dir=dist"
+    "toto": "ng add @ng-bootstrap/ng-bootstrap",
+    "deploy": "npx angular-cli-ghpages --dir=dist"
   },
   "dependencies": {
     "@angular/animations": "^9.1.9",
