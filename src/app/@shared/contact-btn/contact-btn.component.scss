@@ -1,21 +1,12 @@
 @import "src/theme/theme-variables";
 
 .btn-outline-primary {
-  color: $primary;
-  border-color: $primary;
   border-radius: 3rem;
   text-transform: uppercase;
   font-weight: 900;
   border-width: 5px;
   padding: 15px;
-  font-size: 1.5em;
-
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: $primary;
-    color: $white;
-  }
+  font-size: 1.2em;
 
   &::after {
     display: inline-block;
@@ -26,5 +17,29 @@
     border-bottom: 0;
     border-left: 0.5em solid transparent;
     transform: rotate(270deg);
+  }
+
+  &.btn-outline-primary {
+    color: $primary;
+    border-color: $primary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $primary;
+      color: $white;
+    }
+  }
+
+  &.btn-outline-secondary {
+    color: $secondary;
+    border-color: $secondary;
+
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: $secondary;
+      color: $primary;
+    }
   }
 }

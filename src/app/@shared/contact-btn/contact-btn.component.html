@@ -1,3 +1,10 @@
 <div class="rdv-btn-group d-flex justify-content-center my-4">
-  <button type="button" class="btn btn-outline-primary" [routerLink]="['/contact']">Prendre Rendez-vous</button>
+  <button
+    type="button"
+    class="btn btn-outline-primary"
+    [class]="secondary ? ['btn-outline-secondary'] : ['btn-outline-primary']"
+    [routerLink]="['/contact']"
+  >
+    Prendre Rendez-vous
+  </button>
 </div>
