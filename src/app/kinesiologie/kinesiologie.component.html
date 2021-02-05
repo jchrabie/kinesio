@@ -1,20 +1,22 @@
 <div class="container-fluid">
   <img src="assets/bulle.png" alt="Bulle" class="full-page bulle" />
   <img src="assets/bulle.png" alt="Bulle" class="top-left bulle" />
-  <div class="container">
-    <h2>Kinesiologie</h2>
-
-    <div class="row">
-      <div class="col-sm-12 col-md-6 pr-md-5">
-        <h3>Pour qui:</h3>
+  <div class="container bg-secondary">
+    <div class="row mt-5">
+      <div class="col-sm-12 col-md-6 pr-md-5  how-who-container">
+        <h3 class="text-primary mt-0">Pour qui:</h3>
         <p>Adulte, adolescent et enfant à partir de 12 ans.</p>
       </div>
-      <div class="col-sm-12 col-md-6 pl-md-5">
-        <h3>Durée:</h3>
+      <div class="col-sm-12 col-md-6 pl-md-5  how-who-container">
+        <h3 class="text-primary mt-0">Durée:</h3>
         <p>Une séance dure en générale entre 1h15 et 1h45.</p>
       </div>
+
+      <app-contact-btn class="col-12"></app-contact-btn>
     </div>
-    <h3>Pour quoi:</h3>
+  </div>
+  <div class="container">
+    <h2>La kinésiologie</h2>
     <div class="row">
       <div class="col-sm-12 col-md-6 pr-md-5">
         <p>
@@ -56,8 +58,6 @@
         </ul>
       </div>
     </div>
-
-    <app-contact-btn class="pt-4"></app-contact-btn>
     <!-- <div class="row">
       <div
       *ngFor="let subject of kinesioSubjects"

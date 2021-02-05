@@ -1,8 +1,8 @@
 @import "src/theme/theme-variables";
 
 .btn-outline-primary {
-  color: $secondary;
-  border-color: $secondary;
+  color: $primary;
+  border-color: $primary;
   border-radius: 3rem;
   text-transform: uppercase;
   font-weight: 900;
@@ -13,8 +13,8 @@
   &:hover,
   &:active,
   &:focus {
-    background-color: $secondary;
-    color: $primary;
+    background-color: $primary;
+    color: $white;
   }
 
   &::after {
