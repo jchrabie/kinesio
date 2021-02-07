@@ -1,17 +1,17 @@
 <router-outlet></router-outlet>
 
 <ng-template #content let-modal>
-  <div class="modal-header cookie-header d-flex flex-column justify-content-center align-items-center">
+  <div class="modal-header">
     <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
-      <span aria-hidden="true" class="text-white">&times;</span>
+      <span aria-hidden="true">&times;</span>
     </button>
-    <span class="cookie-head">Cookies</span>
   </div>
-  <div class="modal-body text-center text-white px-5 py-4 text-black-50">
+  <div class="modal-body text-justify px-5 py-4 text-black-50">
+    <p class="modal-cookie-head text-center">Un cookie?</p>
     En poursuivant votre navigation, vous acceptez l'utilisation de cookies et autres traceurs servant à mesurer
     l'audience et à comprendre votre navigation.
   </div>
-  <div class="modal-footer d-flex justify-content-center align-items-center">
-    <button type="button" class="btn btn-outline-secondary" (click)="modal.close('Save click')">J'accepte</button>
+  <div class="modal-footer d-flex justify-content-center align-items-center px-5">
+    <button type="button" class="btn btn-cookie" (click)="modal.close('Save click')">J'accepte</button>
   </div>
 </ng-template>

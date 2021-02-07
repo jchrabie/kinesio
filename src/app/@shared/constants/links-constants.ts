@@ -19,7 +19,7 @@ export const linkList: Link[] = [
     url: '/soins-energetiques',
   },
   {
-    name: 'Mon histoire',
+    name: 'Qui suis-je?',
     url: '/histoire',
   },
   {

@@ -18,30 +18,49 @@
 
 .modal-content {
   border-radius: 2rem 0.3rem;
+  background-image: url(assets/cookies.jpeg);
+  background-size: cover;
+  width: 350px;
+
+  .modal-cookie-head {
+    color: $cookie;
+    font-size: 1.8rem;
+    font-weight: bold;
+  }
+
+  .btn-cookie {
+    color: $white;
+    background-color: $cookie;
+    border-color: $cookie;
+    width: 100%;
+    text-transform: uppercase;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $white;
+      background-color: $cookie;
+      border-color: $cookie;
+    }
+  }
+
+  .modal-header,
+  .modal-footer {
+    border: none;
+  }
+
+  .modal-body {
+    margin-top: 160px;
+  }
+
+  .close {
+    color: $cookie !important;
+    outline: none;
+    opacity: 1;
+  }
 
   .modal-footer {
     border-radius: 0 0 1.9rem 0.2rem;
-  }
-}
-
-.cookie-header {
-  background-image: url("assets/cookies.jpg");
-  border-radius: 2rem 0.3rem 0 0;
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 200px;
-
-  .close {
-    opacity: 1;
-    position: absolute;
-    top: 20px;
-    right: 15px;
-  }
-
-  .cookie-head {
-    color: #452409 !important;
-    font-size: 2.8em;
-    font-weight: bolder;
   }
 }
 
