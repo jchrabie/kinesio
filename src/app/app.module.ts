@@ -18,6 +18,8 @@ import { ContactModule } from './contact/contact.module';
 import { KinesiologieModule } from './kinesiologie/kinesiologie.module';
 import { SoinsEnergetiquesModule } from './soins-energetiques/soins-energetiques.module';
 import { CommonModule } from '@angular/common';
+import { PlanSiteComponent } from './plan-site/plan-site.component';
+import { MentionsLegalesComponent } from '@app/mentions-legales/mentions-legales.component';
 
 @NgModule({
   imports: [
@@ -40,7 +42,7 @@ import { CommonModule } from '@angular/common';
     Angulartics2Module.forRoot(),
     AppRoutingModule, // must be imported as the last module as it contains the fallback route
   ],
-  declarations: [AppComponent],
+  declarations: [AppComponent, PlanSiteComponent, MentionsLegalesComponent],
   providers: [],
   bootstrap: [AppComponent],
 })

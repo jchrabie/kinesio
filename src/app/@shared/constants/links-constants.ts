@@ -27,3 +27,14 @@ export const linkList: Link[] = [
     url: '/contact',
   },
 ];
+
+export const otherLinkList: Link[] = [
+  {
+    name: 'Mentions légales',
+    url: '/mentions-legales',
+  },
+  {
+    name: 'Plan du site',
+    url: '/plan-du-site',
+  },
+];

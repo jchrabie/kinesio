@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { Shell } from '@app/shell/shell.service';
+import { MentionsLegalesComponent } from '@app/mentions-legales/mentions-legales.component';
+import { PlanSiteComponent } from '@app/plan-site/plan-site.component';
 
 const routes: Routes = [
   Shell.childRoutes([
@@ -15,6 +17,8 @@ const routes: Routes = [
       loadChildren: () =>
         import('./soins-energetiques/soins-energetiques.module').then((m) => m.SoinsEnergetiquesModule),
     },
+    { path: 'mentions-legales', component: MentionsLegalesComponent },
+    { path: 'plan-du-site', component: PlanSiteComponent },
   ]),
   // Fallback when no prior route is matched
   { path: '**', redirectTo: '', pathMatch: 'full' },

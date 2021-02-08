@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Plan du site</h2>
+  <h3>Menu principal</h3>
+  <ul class="primary-bullet">
+    <li *ngFor="let link of links">
+      <a [routerLink]="[link.url]">{{ link.name }}</a>
+    </li>
+  </ul>
+  <h3>Infos</h3>
+  <ul class="primary-bullet">
+    <li *ngFor="let otherLink of otherLinks">
+      <a [routerLink]="[otherLink.url]">{{ otherLink.name }}</a>
+    </li>
+  </ul>
+</div>

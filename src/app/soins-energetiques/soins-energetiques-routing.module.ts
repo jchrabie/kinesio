@@ -10,7 +10,6 @@ const routes: Routes = [
       path: 'soins-energetiques',
       component: SoinsEnergetiquesComponent,
     },
-    { path: '**', redirectTo: 'soins-energetiques', pathMatch: 'full' },
   ]),
 ];
 

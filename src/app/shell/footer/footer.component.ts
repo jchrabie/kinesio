@@ -1,5 +1,5 @@
-import { Component, OnInit, ChangeDetectionStrategy, OnDestroy } from '@angular/core';
-import { Subject } from 'rxjs';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Link, linkList, otherLinkList } from '@shared/constants/links-constants';
 
 @Component({
   selector: 'app-footer',
@@ -9,6 +9,12 @@ import { Subject } from 'rxjs';
 })
 export class FooterComponent implements OnInit {
   public year: number;
+  public get otherLinks(): Link[] {
+    return otherLinkList;
+  }
+  public get links(): Link[] {
+    return linkList;
+  }
 
   constructor() {}
 

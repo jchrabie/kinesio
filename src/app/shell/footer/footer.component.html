@@ -84,17 +84,8 @@
         <h5 class="text-uppercase my-2">Liens</h5>
 
         <ul class="list-unstyled">
-          <li>
-            <a routerLink="/">Accueil</a>
-          </li>
-          <li>
-            <a routerLink="/kinesiologie">La Kinesiologie</a>
-          </li>
-          <li>
-            <a routerLink="/histoire">Mon Histoire</a>
-          </li>
-          <li>
-            <a routerLink="/contact">Contact et Tarif</a>
+          <li *ngFor="let link of links">
+            <a [routerLink]="[link.url]">{{ link.name }}</a>
           </li>
         </ul>
       </div>
@@ -106,11 +97,8 @@
         <h5 class="text-uppercase my-2">Autres liens</h5>
 
         <ul class="list-unstyled">
-          <li>
-            <a href="#!">Mention légales</a>
-          </li>
-          <li>
-            <a href="#!">Plan du site</a>
+          <li *ngFor="let otherLink of otherLinks">
+            <a [routerLink]="[otherLink.url]">{{ otherLink.name }}</a>
           </li>
         </ul>
       </div>
