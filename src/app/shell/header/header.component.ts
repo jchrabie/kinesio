@@ -1,8 +1,7 @@
 import { Component, ElementRef, ViewChildren, QueryList } from '@angular/core';
+import { BreakpointObserver, Breakpoints } from '@angular/cdk/layout';
 
 import { Link, linkList } from '@app/@shared/constants/links-constants';
-import { Router } from '@angular/router';
-import { delay } from 'rxjs/operators';
 
 @Component({
   selector: 'app-header',
@@ -18,15 +17,11 @@ export class HeaderComponent {
     return linkList;
   }
 
-  constructor(private router: Router) {
-    this.router.events.pipe(delay(100)).subscribe(() => {
-      this.hasChildrenActive = !!this.dropdownItems
-        .toArray()
-        .find((el) => el.nativeElement.classList.contains('active'));
-    });
-  }
+  constructor(private breakpointObserver: BreakpointObserver) {}
 
   toggleMenu() {
-    this.menuHidden = !this.menuHidden;
+    if (this.breakpointObserver.isMatched('(max-width: 991px)')) {
+      this.menuHidden = !this.menuHidden;
+    }
   }
 }

@@ -8,7 +8,7 @@ export interface Link {
 export const linkList: Link[] = [
   {
     name: 'Accueil',
-    url: '/',
+    url: '/home',
   },
   {
     name: 'La kinesiologie',

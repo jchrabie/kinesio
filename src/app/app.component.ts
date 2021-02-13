@@ -1,5 +1,5 @@
-import { Component, OnInit, OnDestroy, ViewChild, AfterViewInit } from '@angular/core';
-import { Router, NavigationEnd, ActivatedRoute } from '@angular/router';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import { ActivatedRoute, NavigationEnd, Router } from '@angular/router';
 import { Title } from '@angular/platform-browser';
 import { TranslateService } from '@ngx-translate/core';
 import { merge } from 'rxjs';
@@ -9,6 +9,7 @@ import { environment } from '@env/environment';
 import { Logger, untilDestroyed } from '@core';
 import { I18nService } from '@app/i18n';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { LocalStorageService } from '@shared/services/local-storage.service';
 
 const log = new Logger('App');
 
@@ -24,17 +25,10 @@ export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
     private translateService: TranslateService,
+    private localStorageService: LocalStorageService,
     private i18nService: I18nService,
     private modalService: NgbModal
-  ) {
-    this.router.events.subscribe((evt) => {
-      if (!(evt instanceof NavigationEnd)) {
-        return;
-      }
-
-      window.scrollTo(0, 0);
-    });
-  }
+  ) {}
 
   ngOnInit() {
     // Setup logger
@@ -66,15 +60,15 @@ export class AppComponent implements AfterViewInit, OnInit, OnDestroy {
       .subscribe((event) => {
         const title = event.title;
         if (title) {
-          this.titleService.setTitle(this.translateService.instant(title));
+          this.titleService.setTitle(`Diane de Sagazan - ${this.translateService.instant(title)}`);
         }
       });
   }
 
   ngAfterViewInit() {
-    if (!localStorage.getItem('cookie')) {
+    if (!this.localStorageService.getItem('cookie')) {
       this.open(this.content);
-      localStorage.setItem('cookie', 'true');
+      this.localStorageService.setItem('cookie', 'true');
     }
   }
 

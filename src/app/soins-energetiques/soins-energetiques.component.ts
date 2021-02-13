@@ -8,7 +8,7 @@ export class SoinsEnergetiquesComponent {
     { name: 'Améliore la vitalité,' },
     { name: 'Diminue la fatigue' },
     { name: 'Atténue la douleur' },
-    { name: 'Soulage des souffrances mentales' },
+    { name: 'Soulage les souffrances mentales' },
     { name: 'Retrouver un meilleur centrage' },
     { name: 'Rééquilibre les énergies du corps' },
     { name: 'Atténue les effets secondaires de traitements lourds' },

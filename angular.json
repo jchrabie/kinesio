@@ -17,21 +17,15 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "allowedCommonJsDependencies": ["hmr"],
+            "outputPath": "dist/diane-kinesio/browser",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
-            "assets": [
-              "src/favicon.ico",
-              "src/apple-touch-icon.png",
-              "src/robots.txt",
-              "src/assets"
-            ],
-            "styles": [
-              "src/main.scss"
-            ],
+            "assets": ["src/favicon.ico", "src/apple-touch-icon.png", "src/robots.txt", "src/assets"],
+            "styles": ["src/main.scss"],
             "scripts": []
           },
           "configurations": {
@@ -99,15 +93,8 @@
             "tsConfig": "tsconfig.spec.json",
             "karmaConfig": "karma.conf.js",
             "scripts": [],
-            "styles": [
-              "src/main.scss"
-            ],
-            "assets": [
-              "src/favicon.ico",
-              "src/apple-touch-icon.png",
-              "src/robots.txt",
-              "src/assets"
-            ]
+            "styles": ["src/main.scss"],
+            "assets": ["src/favicon.ico", "src/apple-touch-icon.png", "src/robots.txt", "src/assets"]
           },
           "configurations": {
             "ci": {
@@ -119,14 +106,8 @@
         "lint": {
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
-            "tsConfig": [
-              "tsconfig.app.json",
-              "tsconfig.spec.json",
-              "e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
-            ]
+            "tsConfig": ["tsconfig.app.json", "tsconfig.spec.json", "e2e/tsconfig.json", "tsconfig.server.json"],
+            "exclude": ["**/node_modules/**"]
           }
         },
         "e2e": {
@@ -139,6 +120,51 @@
             "production": {
               "devServerTarget": "diane-kinesio:serve:production"
             }
+          }
+        },
+        "server": {
+          "builder": "@angular-devkit/build-angular:server",
+          "options": {
+            "outputPath": "dist/diane-kinesio/server",
+            "main": "server.ts",
+            "tsConfig": "tsconfig.server.json"
+          },
+          "configurations": {
+            "production": {
+              "outputHashing": "media",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
+              "sourceMap": false,
+              "optimization": true
+            }
+          }
+        },
+        "serve-ssr": {
+          "builder": "@nguniversal/builders:ssr-dev-server",
+          "options": {
+            "browserTarget": "diane-kinesio:build",
+            "serverTarget": "diane-kinesio:server"
+          },
+          "configurations": {
+            "production": {
+              "browserTarget": "diane-kinesio:build:production",
+              "serverTarget": "diane-kinesio:server:production"
+            }
+          }
+        },
+        "prerender": {
+          "builder": "@nguniversal/builders:prerender",
+          "options": {
+            "browserTarget": "diane-kinesio:build:production",
+            "serverTarget": "diane-kinesio:server:production",
+            "routes": ["/"]
+          },
+          "configurations": {
+            "production": {}
           }
         }
       }

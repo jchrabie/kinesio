@@ -2,8 +2,17 @@
   position: relative;
   display: inline;
   float: right;
+  right: 130px;
   opacity: 0.9;
   clear: both;
   z-index: -1;
   transform: scaleX(-1);
+}
+
+.p-md-100 {
+  padding-top: 100px;
+
+  @media (max-width: 768px) {
+    padding-top: 0;
+  }
 }

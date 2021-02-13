@@ -23,7 +23,7 @@ import { MentionsLegalesComponent } from '@app/mentions-legales/mentions-legales
 
 @NgModule({
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     FormsModule,
     HttpClientModule,
     TranslateModule.forRoot(),
