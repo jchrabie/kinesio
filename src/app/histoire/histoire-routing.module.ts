@@ -6,7 +6,7 @@ import { HistoireComponent } from './histoire.component';
 import { Shell } from '@app/shell/shell.service';
 
 const routes: Routes = [
-  Shell.childRoutes([{ path: 'histoire', component: HistoireComponent, data: { title: extract('Mon histoire') } }]),
+  Shell.childRoutes([{ path: 'qui-suis-je', component: HistoireComponent, data: { title: extract('Qui suis-je ?') } }]),
 ];
 
 @NgModule({

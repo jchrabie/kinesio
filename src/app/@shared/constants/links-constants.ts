@@ -8,7 +8,7 @@ export interface Link {
 export const linkList: Link[] = [
   {
     name: 'Accueil',
-    url: '/home',
+    url: '/accueil',
   },
   {
     name: 'La kinesiologie',
@@ -20,7 +20,7 @@ export const linkList: Link[] = [
   },
   {
     name: 'Qui suis-je?',
-    url: '/histoire',
+    url: '/qui-suis-je',
   },
   {
     name: 'Contact et tarifs',

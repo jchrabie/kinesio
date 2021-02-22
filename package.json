@@ -18,7 +18,6 @@
     "generate": "ng generate",
     "build": "ng build --prod --base-href https://jchrabie.github.io/kinesio/",
     "deploy": "npx angular-cli-ghpages --dir=dist",
-    "toto": "ng add @ng-toolkit/universal",
     "dev:ssr": "ng run diane-kinesio:serve-ssr",
     "serve:ssr": "node dist/diane-kinesio/server/main.js",
     "build:ssr": "ng build --prod && ng run diane-kinesio:server:production",

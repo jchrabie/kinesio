@@ -2,8 +2,8 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { extract } from '@app/i18n';
-import { KinesiologieComponent } from './kinesiologie.component';
 import { Shell } from '@app/shell/shell.service';
+import { KinesiologieComponent } from './kinesiologie.component';
 
 const routes: Routes = [
   Shell.childRoutes([
